@@ -1,48 +1,36 @@
-import 'package:finances/front/app_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:finances/front/app_styles.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class HomeScreenIcons extends StatelessWidget {
+  const HomeScreenIcons({super.key});
 
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: AppTheme.white,
-     body: Column(
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        ElevatedButton(
+          onPressed: () {
+            // Não faz nada, só existe
+          },
+          child: const Text("Do Thing"),
+        ),
         Row(
           children: [
-            _mainButton(() => null, 'Do Thing'),
-            Row(
-              children: [
-                _actionButton(() => null, Icons.file_upload),
-                const SizedBox(width:8),
-                _actionButton(() => null, Icons.folder),
-
-              ],
-            )
-            ],
-          )
-        ],
-      )
-    );
-  }
-
-  ElevatedButton _mainButton(Function()? onPressed, String text) {
-    return ElevatedButton(onPressed: onPressed, child: Text(text));
-  }
-
-  IconButton _actionButton(Function()? onPressed, IconData icon) {
-    return IconButton(
-      onPressed: onPressed,
-      icon: Icon(
-        icon, 
-        color: AppTheme.purple,
-      )
+            IconButton(
+              icon: const Icon(Icons.file_upload, color: AppTheme.purple),
+              onPressed: () {
+              },
+            ),
+            const SizedBox(width: 8),
+            IconButton(
+              icon: const Icon(Icons.folder, color: AppTheme.purple),
+              onPressed: () {
+              },
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
