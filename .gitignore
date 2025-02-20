@@ -33,6 +33,11 @@ migrate_working_dir/
 .pub/
 /build/
 
+# Generated plugin registrants for all platforms
+linux/flutter/generated_plugin_registrant.*
+windows/flutter/generated_plugin_registrant.*
+macos/flutter/generated_plugin_registrant.*
+
 # Symbolication related
 app.*.symbols
 
@@ -43,5 +48,8 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Flutter ephemeral files (temporary)
+flutter/ephemeral/
 
 .env

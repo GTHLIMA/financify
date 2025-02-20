@@ -1,5 +1,3 @@
-flutter/ephemeral/
-
 # Visual Studio user-specific files.
 *.suo
 *.user
@@ -11,9 +9,14 @@ x64/
 x86/
 
 # Visual Studio cache files
-# files ending in .cache can be ignored
 *.[Cc]ache
-# but keep track of directories ending in .cache
 !*.[Cc]ache/
 
-.env
+# Flutter ephemeral files (temporary files generated during build)
+flutter/ephemeral/
+
+# Generated plugin registrants for Flutter on Windows
+flutter/generated_plugin_registrant.*
+
+# Other build artifacts
+/build/
